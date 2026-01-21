@@ -1,0 +1,77 @@
+# Project Tech Stack & Workflow Guide
+
+This guide provides a complete breakdown of every tool, package, plugin, and command used to build this project. It is designed to serve as a reference for your future development work.
+
+## 1. Environment & Core Tools
+Before starting the project, these core components were installed and configured:
+
+*   **Node.js & npm**: The foundation of modern web development. Node.js is the runtime that executes JavaScript on your machine, and `npm` (Node Package Manager) is used to download and manage the code libraries (packages) used in the project.
+*   **Visual Studio Code (VS Code)**: The primary text editor (IDE) used for writing the code.
+*   **Windows PowerShell / Terminal**: Used to run commands like starting the development server or installing new features.
+
+---
+
+## 2. Framework & Build Tool
+The core of the application is built using:
+
+*   **React (v19)**: A JavaScript library for building user interfaces. It allows us to create reusable "Components" (like buttons, navbars, and cards) which makes the code more organized and efficient.
+*   **Vite (v7)**: A lightning-fast "build tool." In the past, tools like `create-react-app` were used, but Vite is much faster for local development and bundling the final project for the web.
+
+---
+
+## 3. UI, Styling & Design
+To achieve the "Premium" look and responsive layout, the following were used:
+
+*   **Bootstrap (v5)**: A globally popular CSS library that provides pre-built layout tools (like Grids and Flexbox) and basic components.
+*   **React Bootstrap**: A special version of Bootstrap designed specifically for React. Instead of using raw HTML classes, we use React components like `<Container>`, `<Row>`, and `<Col>`.
+*   **Vanilla CSS**: Used in [index.css](file:///c:/Users/HP/Desktop/WAITLIST%20WEBSITE/src/index.css) and [App.css](file:///c:/Users/HP/Desktop/WAITLIST%20WEBSITE/src/App.css) for custom styling, gradients, glassmorphism effects, and fine-tuning the design beyond what Bootstrap offers.
+
+---
+
+## 4. Key Packages & Plugins
+These are the additional libraries installed via the terminal to add specific features:
+
+*   **`framer-motion`**: Used for smooth animations. It makes elements fade in, slide, or bounce with just a few lines of code.
+*   **`lucide-react` & `react-icons`**: Huge libraries of icons. If you need a "search" icon or a "user" icon, these packages provide them as simple React components.
+*   **`react-router-dom`**: Used for "Routing." Even though this looks like a multi-page website, it's actually a "Single Page Application" (SPA). This package lets us navigate between pages (Landing, Features, etc.) without the browser refreshing.
+*   **`@vitejs/plugin-react`**: A plugin that tells Vite how to handle React files and enable features like "Hot Module Replacement" (seeing changes instantly without refreshing).
+
+---
+
+## 5. Terminal Commands Used
+Here is the sequence of commands typically used for a project like this:
+
+### Initialization
+```powershell
+# Create a new Vite project
+npm create vite@latest .
+# (You then select "React" and "JavaScript" or "TypeScript")
+```
+
+### Installing Dependencies
+```powershell
+# Install all required packages at once
+npm install bootstrap react-bootstrap lucide-react react-icons react-router-dom framer-motion
+```
+
+### Running the Project
+```powershell
+# Start the local development server (usually at http://localhost:5173)
+npm run dev
+
+# Build the project for production (creates a 'dist' folder)
+npm run build
+
+# Preview the production build locally
+npm run preview
+```
+
+---
+
+## 6. Project Structure Overview
+*   **[package.json](file:///c:/Users/HP/Desktop/WAITLIST%20WEBSITE/package.json)**: The heart of the project. It lists every version of every package installed.
+*   **[src/main.jsx](file:///c:/Users/HP/Desktop/WAITLIST%20WEBSITE/src/main.jsx)**: The entry point where React is "mounted" to the HTML.
+*   **[src/App.jsx](file:///c:/Users/HP/Desktop/WAITLIST%20WEBSITE/src/App.jsx)**: The main container for your application.
+*   **`src/pages/`**: Contains the full layouts for different sections (Landing, Story, Features).
+*   **`src/components/`**: Small, reusable parts of the UI (like `Navigation.jsx`).
+*   **`index.html`**: The single HTML file that serves as the shell for the entire React app.
